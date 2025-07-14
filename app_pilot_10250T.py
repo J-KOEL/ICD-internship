@@ -5,9 +5,9 @@ from itertools import product
 # Load data
 @st.cache_data
 def load_data():
-    operator_df = pd.read_csv("NonIlluminatedPushbuttonOperator.csv", header=None, names=["Code", "Operator Type"])
-    color_df = pd.read_csv("NonIlluminatedPushbuttonButtonColor.csv", header=None, names=["Code", "Color"])
-    circuit_df = pd.read_csv("NonIlluminatedPushbuttonCircuit.csv", header=None, names=["Code", "Circuit Type"])
+    operator_df = pd.read_csv("NonIlluminatedPushbuttonOperator 1.csv", header=None, names=["Operator Type", "Code"])
+    color_df = pd.read_csv("NonIlluminatedPushbuttonButtonColor 1.csv", header=None, names=["Color", "Code"])
+    circuit_df = pd.read_csv("NonIlluminatedPushbuttonCircuit 1.csv", header=None, names=["Circuit Type", "Code"])
     
     # Drop header rows that were read as data
     operator_df = operator_df[1:].reset_index(drop=True)
